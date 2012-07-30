@@ -1,0 +1,16 @@
+<header>
+
+</header>
+
+<div>
+	<h1><%= @poll.title %></h1>
+</div>
+
+<div>
+	<div><h4>Share Your Poll with this handy dandy link:<br><%= link_to poll_url(@poll), @poll %></h4>
+	</div>
+
+    <div>		
+	<h4>Edit Your Poll with this secret link:<br><%= link_to edit_poll_url(@poll.edit_url), edit_poll_url(@poll.edit_url) %></h4>
+    </div>		
+</div>
