@@ -1,16 +1,32 @@
-<header>
 
+<div class="hero-unit">
+<header>
 </header>
 
 <div>
-	<h1><%= @poll.title %></h1>
+	<h2><%= @poll.title %></h2>
 </div>
 
+<div><h4>
+  <% if @poll.questions.empty? %>
+    Congrats on your new poll!!! 
+	<% else %> <em>Poll questions </em>
+		  <ol>
+		  <% @poll.questions.each do |question| %>
+		  <li><%= question.text %></li> <br>
+		  <% end %>
+		  </ol>
+	<% end %> 
+		<%= link_to "Add", new_poll_question_path(@poll) %> some questions to your poll!</h4>
 <div>
+	
 	<div><h4>Share Your Poll with this handy dandy link:<br><%= link_to poll_url(@poll), @poll %></h4>
 	</div>
 
     <div>		
-	<h4>Edit Your Poll with this secret link:<br><%= link_to edit_poll_url(@poll.edit_url), edit_poll_url(@poll.edit_url) %></h4>
+	<h4>Edit Your Poll with this secret link:<br><%= link_to secret_url_url(@poll.edit_url), secret_url_url(@poll.edit_url) %></h4>
     </div>		
+  <%= d @poll%>    
+</div>
+
 </div>

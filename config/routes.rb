@@ -1,12 +1,13 @@
 Pollster::Application.routes.draw do
   root :to => 'polls#new'
   
-  match 'polls/:edit_url/edit' => 'polls#edit', :as => :secret_url
-  # match 'polls/:id/edit' => "polls#new"
-  
   resources :polls do
     resources :questions
   end
+  
+  match 'edit/:edit_url' => 'polls#edit', :as => :secret_url
+  # match 'polls/:id/edit' => "polls#new"
+  
   
   
   

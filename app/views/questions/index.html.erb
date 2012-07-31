@@ -1,0 +1,16 @@
+<div class="hero-unit">
+	<header>
+		<p>These are all the questions for your poll!</p>
+	</header>
+
+<% @questions.each do |question| %>
+  <%= "Poll: #{question.poll.title}" %><br>
+  <%= "Question: #{question.text}" %>           
+
+<!-- This works without the render partial below -->
+  <%= link_to "Edit Question", edit_poll_question_path(question.poll, question) %>  
+  <%= link_to "Delete Question", poll_question_path(question.poll, question),:method => :delete %>  
+  <br>
+<% end %>
+</div>
+<!-- poll_questions_path(question.poll, question) -->
