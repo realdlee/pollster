@@ -12,7 +12,7 @@ class PollsController < ApplicationController
     #10 character string is generated
     # create_edit_url(params[:id])
     if @poll.save
-      flash[:notice] = "Look at your bad self.  You just made a poll."
+      flash[:notice] = "Well done.  You just made a poll."
     end
     respond_with @poll
   end

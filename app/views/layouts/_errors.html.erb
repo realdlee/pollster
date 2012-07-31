@@ -1,0 +1,13 @@
+<div class = "flash">
+	<% flash.each do |key, value| %> 
+	  <a class="close" data-dismiss="alert" href="#">×</a>
+	  <%= content_tag(:div, value, class: "alert alert-#{key}") %>   
+	<% end %>
+</div>
+
+
+
+<!-- <div class="alert">
+<button class="close" data-dismiss="alert">×</button>
+<strong>Warning!</strong> Best check yo self, you're not looking too good.
+</div> -->
