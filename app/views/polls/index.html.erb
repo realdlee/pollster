@@ -1,3 +1,8 @@
-<header>
-	<p>Polls</p>
-</header>
+
+<div class="hero-unit">
+	<ol>
+	<% @polls.each do |poll| %>
+	  <li><%= poll.title %></li><br>
+	<% end %>
+	</ol>
+</div>
