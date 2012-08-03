@@ -1,8 +1,7 @@
 
 <div class="hero-unit">
-	<ol>
-	<% @polls.each do |poll| %>
-	  <li><%= poll.title %></li><br>
-	<% end %>
+  <ol>
+		<%= render @polls %>
 	</ol>
 </div>
+

@@ -25,16 +25,15 @@ group :test, :development do
   gem 'guard'
   gem 'guard-rspec'
   gem 'rspec-rails'
+  gem 'quiet_assets'
   gem 'faker'
   gem 'fabrication'
   gem 'simplecov'
   gem 'sqlite3'
 end
 
-gem 'quiet_assets', :group => :development
-
 group :production do
-  gem 'pg'
+  gem 'pg' 
 end
 
 # To use ActiveModel has_secure_password

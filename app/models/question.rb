@@ -4,5 +4,5 @@ class Question < ActiveRecord::Base
   validates :text, presence: true,
                    length: { maximum: 100 }
   
-  belongs_to :poll #, :dependent => destroy
+  belongs_to :poll
 end

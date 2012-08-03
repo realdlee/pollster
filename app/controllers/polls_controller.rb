@@ -38,9 +38,9 @@ class PollsController < ApplicationController
     @poll = Poll.find(params[:id])
     if @poll.update_attributes(params[:poll])
       flash[:success] = "Poll updated"
-      # redirect_to @poll
-    # else
-      # render 'edit'
+      redirect_to @poll
+    else
+      render 'edit'
     end
   end
   # respond_with @poll
